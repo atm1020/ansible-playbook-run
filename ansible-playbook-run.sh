@@ -9,8 +9,7 @@ if [ ! -f "$PLAYBOOK_PATH" ]; then
 fi
 
 ansible_output=$(ansible-playbook --list-tags $PLAYBOOK_PATH)
-plain_tags=$(ansible-playbook --list-tags $PLAYBOOK_PATH | grep "TASK TAGS" | sed 's/,//g' | sed 's/\[//g' | sed 's/\]//g' | sed 's/TASK TAGS://g')
-plain_tags="$plain_tags all" # add all option to the list
+plain_tags="$(ansible-playbook --list-tags $PLAYBOOK_PATH | grep "TASK TAGS" | sed 's/,//g' | sed 's/\[//g' | sed 's/\]//g' | sed 's/TASK TAGS://g') all"
 
 selected=$(for tag in $plain_tags; do echo $tag; done | fzf)
 
