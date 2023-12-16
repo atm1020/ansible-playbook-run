@@ -16,7 +16,7 @@ Select a tag or run the full playbook with the ```all``` option.
 
 ![commit_graph](img/demo.gif)
 
-The actual user name is passed as an extra var with the name variable name ```user```,
+The actual user name is passed as an extra var with the variable name ```user```,
 so you can  use this in your playbook like this ```{{ user }}```
 
 ### Installation
