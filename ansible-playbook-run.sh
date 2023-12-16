@@ -20,3 +20,4 @@ fi
 
 echo "selected: $selected | running with user: $USER_NAME"
 ansible-playbook --ask-become-pass --extra-vars "user=$USER_NAME" $PLAYBOOK_PATH --tags $selected
+
