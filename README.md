@@ -13,7 +13,11 @@ ansible-playbook-run
 ```
 Select a tag or run the full playbook with the ```all``` option.
 
+
 ![commit_graph](img/demo.gif)
+
+The actual user name is passed as an extra var with the name variable name ```user```,
+so you can  use this in your playbook like this ```{{ user }}```
 
 ### Installation
 You can pass the playbook path as an argument (```-p path-to-the-playbook```) or you will be prompted to enter it.
