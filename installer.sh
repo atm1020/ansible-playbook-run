@@ -34,7 +34,7 @@ fi
 
 ansible-playbook --syntax-check $PATH_TO_PLAYBOOK || exit
 
-curl -s $REPO_URL | sed "s|{{ path }}|$PATH_TO_PLAYBOOK|g" > $SCRIPT_NAME > $TMP_FILE
+curl -s $REPO_URL | sed "s|{{ path }}|$PATH_TO_PLAYBOOK|g" > $TMP_FILE
 sudo mv $TMP_FILE /usr/local/bin/$SCRIPT_NAME
 sudo chmod +x /usr/local/bin/$SCRIPT_NAME
 
